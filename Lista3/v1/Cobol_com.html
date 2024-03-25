@@ -1,0 +1,164 @@
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content=text/html; charset="utf-8">
+		<title>Site das Linguagens de Programação e Marcação</title>
+		<link rel="stylesheet" type="text/css" href="cssdiv.css">
+	</head>
+	<body>
+		<div id="estrutura">
+			<div id="cabecalho">
+				<div id="titulo-cabecalho">
+					<h1>Linguangens de Programação e Marcação</h1>
+				</div>
+			</div>
+	
+			<div id="menu-superior">
+                <a href="index.html">Home</a>
+				<a href="C.html">C</a>	
+				<a href="Python.html">Python</a>		
+				<a href="Cobol.html">Cobol</a>
+				<a href="HTML.html">HTML</a>
+				<a href="PHP.html">PHP</a>
+			</div>
+		
+			<div id="principal">
+				<div id="menu-esquerdo">
+					<ul>
+						<li>
+							<a href="Cobol.html">Introdução</a>
+						</li>
+						<li>
+							<a href="Cobol_com.html">Comandos Básicos</a>
+						</li>
+						<li>
+							<a href="Cobol_est.html">Estruturas de Repetição</a>
+						</li>
+					</ul>
+				</div>
+
+				<div id="conteudo">
+					<h1>Comandos Básicos</h1>
+					<p>
+						<p><h3>1º) Comando de atribuição:</h3></p>
+
+						<p>move 31 to diasmes</p><br>
+
+						<p><h3>2º) Chamada de procedimento</h3></p>
+
+						<p>PERFORM P1000-INICIAL THRU P1000-FIM</p><br>
+
+						<p><h3>3º) Comando seqüenciais:</h3></p>
+
+						<p>DISPLAY “hello world!”</p>
+
+						<p>STOP “teste.”.</p>
+
+						<p>O comando acima pode ser escrito seqüencialmente:</p>
+
+						<p>DISPLAY “hello world!” STOP “teste.”.</p><br>
+
+						<p><h3>4º) Comandos condicionais:</h3></p>
+
+						<p><h4>4.1 – If</h4></p>
+
+						<p>IF WSS-RESTO EQUAL 0 OR 1</p>
+
+						<p>MOVE ZEROES TO WSS-NUMERO-T (15)</p>
+
+						<p>ELSE</p>
+
+						<p>SUBTRACT WSS-RESTO FROM 11 GIVING WSS-NUMERO-T (15)</p>
+
+						<p>END-IF.</p>
+
+						<p><h4>4.2 – Evaluate ( case do Cobol):</h4></p>
+
+						<p>EVALUATE TRUE</p>
+
+						<p>WHEN LKS-ACAO = ‘C’</p>
+	
+						<p>EVALUATE LKS-TIPO-CALCULO</p>
+
+						<p>WHEN ‘CPF’</p>
+
+						<p>MOVE LKS-NUMERO-I (07:09) TO WSS-NUMERO (05:09)</p>
+
+						<p>WHEN ‘CGC’</p>
+
+						<p>MOVE LKS-NUMERO-I (03:13) TO WSS-NUMERO (01:13)
+
+						<p>WHEN ‘PIS’</p>
+
+						<p>MOVE LKS-NUMERO-I (06:10) TO WSS-NUMERO (05:10)</p>
+
+						<p>WHEN OTHER</p>
+
+						<p>MOVE 1 TO LKS-RETORNO</p>
+
+						<p>GOBACK</p>
+
+						<p>END-EVALUATE</p>
+
+						<p>WHEN LKS-ACAO = ‘V’</p>
+
+						<p>EVALUATE LKS-TIPO-CALCULO</p>
+
+						<p>WHEN ‘CPF’</p>
+
+						<p>WHEN ‘CGC’</p>
+
+						<p>WHEN ‘PIS’</p>
+
+						<p>MOVE LKS-NUMERO-I TO WSS-NUMERO</p>
+
+						<p>WHEN OTHER</p>
+
+						<p>MOVE 1 TO LKS-RETORNO</p>
+
+						<p>GOBACK</p>
+
+						<p>END-EVALUATE</p>
+
+						<p>WHEN OTHER</p>
+
+						<p>MOVE 2 TO LKS-RETORNO</p>
+
+						<p>GOBACK</p>
+
+						<p>END-EVALUATE.</p><br>
+
+						<p><h3>5º) Comando de iteração</h3></p>
+
+						<p><h4>5.1) indefinido pré-teste:</h4></p>
+
+						<p>PERFORM UNTIL WS-INDICE > 13</p>
+
+						<p>MOVE WS-INDICE TO NUM-LINHA(WS-INDICE)</p>
+
+						<p>MOVE SPACES TO TEXTO-LINHA(WS-INDICE)</p>
+
+						<p>ADD 1 TO WS-INDICE</p>
+
+						<p>END-PERFORM.</p>
+
+						<p><h4>5.2) definido:</h4></p>
+
+						<p>PERFORM VARYING CONTADOR FROM 1 BY 1</p>
+								
+						<p>UNTIL CONTADOR > 10</p>
+
+						<p>DISPLAY “CONTADOR: ” CONTADOR</p>
+
+						<p>END-PERFORM.</p><br>
+					</p><br>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="rodape">
+			Curso de programação Web 02-2019
+		</div>
+	</body>
+</html>
