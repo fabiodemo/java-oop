@@ -1,0 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package projetoaula02;
+
+/**
+ *
+ * @author fabiodemo
+ */
+public class Puppy {
+
+   public Puppy(String name) {
+      // This constructor has one parameter, name.
+      System.out.println("Passed Name is : " + name );
+   }
+}
